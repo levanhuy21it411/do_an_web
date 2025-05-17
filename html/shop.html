@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="/css/shop.css">
+  <script src="/js/shop.js"></script>
+</head>
+
+<body>
+  <header class="custom-header">
+    <a href="/html/home.html">
+      <div class="custom-logo">
+        <img src="/img/logo.png" alt="Techshop Logo" />
+        <span>TECHSHOP</span>
+      </div>
+    </a>
+    <nav class="custom-navbar">
+      <a href="/html/home.html">HOME</a>
+      <a href="#">SHOP</a>
+      <a href="#">TOURNAMENT</a>
+      <a href="#">ABOUT</a>
+      <a href="https://www.facebook.com/huylv.2k3">CONTACT</a>
+    </nav>
+    <div class="custom-login-btn">
+      <button><a href="/html/login.html">Login</a></button>
+    </div>
+  </header>
+  <div class="container">
+    <div class="sidebar">
+      <div class="search-box">
+        <input type="text" placeholder="Tìm sản phẩm...">
+        <button>🔍</button>
+      </div>
+      <h4>Danh Mục</h4>
+      <ul class="category-list">
+        <li class="category-item has-mega">
+          Laptop <i class="fas fa-chevron-right arrow"></i>
+          <div class="mega-menu">
+            <div class="menu-column">
+              <h4>Thương hiệu</h4>
+              <ul>
+                <li>Mac</li>
+                <li>ASUS</li>
+                <li>Lenovo</li>
+                <li>Dell</li>
+                <li>HP</li>
+                <li>Acer</li>
+                <li>LG</li>
+                <li>Huawei</li>
+                <li>MSI</li>
+                <li>Gigabyte</li>
+                <li>Vaio</li>
+                <li>Masstel</li>
+              </ul>
+            </div>
+            <div class="menu-column">
+              <h4>Phân khúc giá</h4>
+              <ul>
+                <li>Dưới 10 triệu</li>
+                <li>10 - 15 triệu</li>
+                <li>15 - 20 triệu</li>
+                <li>20 - 25 triệu</li>
+                <li>25 - 30 triệu</li>
+              </ul>
+            </div>
+            <div class="menu-column">
+              <h4>Nhu cầu sử dụng</h4>
+              <ul>
+                <li>Văn phòng</li>
+                <li>Gaming</li>
+                <li>Mỏng nhẹ</li>
+                <li>Đồ họa – kỹ thuật</li>
+                <li>Sinh viên</li>
+                <li>Cảm ứng</li>
+                <li><span class="badge new">Mới</span> Laptop AI</li>
+              </ul>
+            </div>
+            <div class="menu-column">
+              <h4>Dòng chip</h4>
+              <ul>
+                <li>Core i3</li>
+                <li>Core i5</li>
+                <li>Core i7</li>
+                <li>Core i9</li>
+                <li>Apple M1</li>
+                <li><span class="badge new">Mới</span> Apple M4</li>
+                <li><span class="badge hot">HOT</span> Intel Core Ultra</li>
+                <li>AMD Ryzen</li>
+              </ul>
+            </div>
+            <div class="menu-column">
+              <h4>Kích thước màn hình</h4>
+              <ul>
+                <li>12″</li>
+                <li>13″</li>
+                <li>14″</li>
+                <li>15.6″</li>
+                <li>16″</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="category-item has-mega">
+          PC <i class="fas fa-chevron-right arrow"></i>
+          <div class="mega-menu">
+            <div class="menu-column">
+              <h4>Thương hiệu PC</h4>
+              <ul>
+                <li>Dell</li>
+                <li>HP</li>
+                <li>Lenovo</li>
+                <li>Asus</li>
+              </ul>
+            </div>
+            <div class="menu-column">
+              <h4>Phân khúc giá</h4>
+              <ul>
+                <li>Dưới 5 triệu</li>
+                <li>5 – 10 triệu</li>
+                <li>Trên 10 triệu</li>
+              </ul>
+            </div>
+            <div class="menu-column">
+              <h4>Linh kiện</h4>
+              <ul>
+                <li>Card đồ họa</li>
+                <li>RAM</li>
+                <li>SSD</li>
+                <li>Bo mạch chủ</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <!-- Chuột -->
+        <li class="category-item has-mega">
+          Chuột <i class="fas fa-chevron-right arrow"></i>
+          <div class="mega-menu">
+            <div class="menu-column">
+              <h4>Loại chuột</h4>
+              <ul>
+                <li>Có dây</li>
+                <li>Không dây</li>
+                <li>Bluetooth</li>
+              </ul>
+            </div>
+            <div class="menu-column">
+              <h4>Thương hiệu</h4>
+              <ul>
+                <li>Logitech</li>
+                <li>Razer</li>
+                <li>SteelSeries</li>
+                <li>Microsoft</li>
+              </ul>
+            </div>
+            <div class="menu-column">
+              <h4>Giá</h4>
+              <ul>
+                <li>Dưới 500k</li>
+                <li>500k – 1 triệu</li>
+                <li>Trên 1 triệu</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- Bàn phím -->
+        <li class="category-item has-mega">
+          Bàn phím <i class="fas fa-chevron-right arrow"></i>
+          <div class="mega-menu">
+            <div class="menu-column">
+              <h4>Kiểu kết nối</h4>
+              <ul>
+                <li>Có dây</li>
+                <li>Không dây</li>
+              </ul>
+            </div>
+            <div class="menu-column">
+              <h4>Loại switch</h4>
+              <ul>
+                <li>Cherry MX</li>
+                <li>Romer-G</li>
+                <li>Optical</li>
+                <li>Membrane</li>
+              </ul>
+            </div>
+            <div class="menu-column">
+              <h4>Thương hiệu</h4>
+              <ul>
+                <li>Logitech</li>
+                <li>Ducky</li>
+                <li>Keychron</li>
+                <li>Razer</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- Tai nghe -->
+        <li class="category-item has-mega">
+          Tai nghe <i class="fas fa-chevron-right arrow"></i>
+          <div class="mega-menu">
+            <div class="menu-column">
+              <h4>Kiểu dáng</h4>
+              <ul>
+                <li>Chụp đầu</li>
+                <li>Nhét tai</li>
+                <li>Bone-conduction</li>
+              </ul>
+            </div>
+            <div class="menu-column">
+              <h4>Công nghệ</h4>
+              <ul>
+                <li>ANC (Khử ồn)</li>
+                <li>Bluetooth 5.0</li>
+                <li>Wired</li>
+              </ul>
+            </div>
+            <div class="menu-column">
+              <h4>Thương hiệu</h4>
+              <ul>
+                <li>Sony</li>
+                <li>JBL</li>
+                <li>Logitech</li>
+                <li>HyperX</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <h4>Lọc theo hãng</h4>
+      <label><input type="checkbox"> ASUS</label><br>
+      <label><input type="checkbox"> Acer</label><br>
+      <label><input type="checkbox"> Dell</label><br>
+      <label><input type="checkbox"> Razer</label><br>
+    </div>
+
+
+    <div class="content">
+      <!-- Slider Sản phẩm nổi bật -->
+      <section class="featured-section">
+        <h2>Sản phẩm nổi bật</h2>
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <div class="card">
+              <span class="badge">HOT</span>
+              <img src="/img/product/Bàn-phím-Logitech-G-Pro-X.png" alt="Sản phẩm 1">
+              <div class="card-content">
+                <h4>Tai nghe Logitech G733</h4>
+                <p class="price">25.000.000₫</p>
+                <button class="buy-button">🛒Mua ngay</button>
+              </div>
+            </div>
+            <div class="card">
+              <span class="badge">HOT</span>
+              <img src="/img/product/tai-nghe-chup-tai-logitech-rgb-g733-10.png" alt="Sản phẩm 2">
+              <div class="card-content">
+                <h4>Chuột Logitech G502</h4>
+                <p class="price">22.500.000₫</p>
+                <button class="buy-button">🛒Mua ngay</button>
+              </div>
+            </div>
+            <div class="card">
+              <span class="badge">HOT</span>
+              <img src="/img/product/Tai-nghe-HyperX-Cloud-II.png" alt="Sản phẩm 3">
+              <div class="card-content">
+                <h4>Laptop Acer Nitro 5</h4>
+                <p class="price">28.900.000₫</p>
+                <button class="buy-button">🛒Mua ngay</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+        </div>
+      </section>
+      <!-- flash sale -->
+    <section class="fs-section">
+  <div class="fs-header">
+    <h2 class="fs-title">Flash Sale</h2>
+    <div class="fs-countdown">
+  <div class="fs-countdown__item">
+    <div id="hours" class="fs-countdown__value">00</div>
+    <div class="fs-countdown__label">Giờ</div>
+  </div>
+  <div class="fs-countdown__item">
+    <div id="minutes" class="fs-countdown__value">00</div>
+    <div class="fs-countdown__label">Phút</div>
+  </div>
+  <div class="fs-countdown__item">
+    <div id="seconds" class="fs-countdown__value">00</div>
+    <div class="fs-countdown__label">Giây</div>
+  </div>
+</div>
+  </div>
+  <div class="fs-products">
+    <div class="fs-card">
+      <img src="/img/product/Ban-phim-Ducky-One-2-Mini.png" alt="Sản phẩm 1">
+      <div class="fs-card__content">
+        <h4>Laptop</h4>
+        <p class="fs-price">VND 1.500.000</p>
+      </div>
+    </div>
+    <div class="fs-card">
+      <img src="/img/product/Bàn-phím-Logitech-G-Pro-X.png" alt="Sản phẩm 2">
+      <div class="fs-card__content">
+        <h4>Chuột</h4>
+        <p class="fs-price">VND 5.000.000</p>
+      </div>
+    </div>
+    <div class="fs-card">
+      <img src="/img/product/Chuột-Gaming-Razer-Viper.png" alt="Sản phẩm 3">
+      <div class="fs-card__content">
+        <h4>AORUS</h4>
+        <p class="fs-price">VND 8.700.000</p>
+      </div>
+    </div>
+    <div class="fs-card">
+      <img src="/img/product/Laptop-Dell-G15-RTX.png" alt="Sản phẩm 4">
+      <div class="fs-card__content">
+        <h4>Ghế gaming</h4>
+        <p class="fs-price">VND 1.200.000</p>
+      </div>
+    </div>
+  </div>
+</section>
+    </div>
+  </div>
+ <div class="section">
+  <div class="section-header">
+    <h3>Top Tìm Kiếm Hàng Đầu</h3>
+    <button class="see-more-btn">Xem thêm</button>
+  </div>
+
+  <div class="products">
+    <div class="product-card">
+      <img src="/img/product/Laptop-Gaming-Acer-Nitro-5.png" alt="Laptop Gaming Acer Nitro 5">
+      <p class="product-name">Laptop Gaming Acer Nitro 5</p>
+      <p class="product-price">22.500.000₫</p>
+    </div>
+    <div class="product-card">
+      <img src="/img/product/Màn-hình-LG-UltraGear-24.png" alt="Màn hình LG UltraGear 24'">
+      <p class="product-name">Màn hình LG UltraGear 24"</p>
+      <p class="product-price">4.500.000₫</p>
+    </div>
+    <div class="product-card">
+      <img src="/img/product/Bàn-phím-Logitech-G-Pro-X.png" alt="Bàn phím Logitech G Pro X">
+      <p class="product-name">Bàn phím Logitech G Pro X</p>
+      <p class="product-price">3.200.000₫</p>
+    </div>
+  </div>
+</div>
+ <div class="recommendation-section">
+  <div class="header-bar">
+    <h3>Gợi Ý Hôm Nay</h3>
+  </div>
+  <div class="product-list">
+    <!-- Hàng 1 -->
+    <div class="item-card">
+      <img src="/img/product/Tai-nghe-HyperX-Cloud-II.png" alt="Tai nghe HyperX Cloud II">
+      <p class="item-name">Tai nghe HyperX Cloud II</p>
+      <p class="item-price">1.890.000₫</p>
+    </div>
+    <div class="item-card">
+      <img src="/img/product/Chuột-Logitech-G502-Hero.png" alt="Chuột Logitech G502 Hero">
+      <p class="item-name">Chuột Logitech G502 Hero</p>
+      <p class="item-price">1.290.000₫</p>
+    </div>
+    <div class="item-card">
+      <img src="/img/product/Laptop-Dell-G15-RTX.png" alt="Laptop Dell G15 RTX">
+      <p class="item-name">Laptop Dell G15 RTX</p>
+      <p class="item-price">28.900.000₫</p>
+    </div>
+
+    <!-- Hàng 2 -->
+    <div class="item-card">
+      <img src="/img/product/Bàn-phím-cơ-RK61.png" alt="Bàn phím RK61">
+      <p class="item-name">Bàn phím cơ RK61</p>
+      <p class="item-price">850.000₫</p>
+    </div>
+    <div class="item-card">
+      <img src="/img/product/Màn-hình-LG-24-inch.png">
+      <p class="item-name">Màn hình LG 24 inch</p>
+      <p class="item-price">2.990.000₫</p>
+    </div>
+    <div class="item-card">
+      <img src="/img/product/Laptop-Lenovo-LOQ.png" alt="Laptop Lenovo LOQ">
+      <p class="item-name">Laptop Lenovo LOQ</p>
+      <p class="item-price">1.490.000₫</p>
+    </div>
+
+    <!-- Hàng 3 -->
+    <div class="item-card">
+      <img src="/img/product/Chuột-Gaming-Razer-Viper.png" alt="Chuột Gaming Razer Viper">
+      <p class="item-name">Chuột Gaming Razer Viper</p>
+      <p class="item-price">1.390.000₫</p>
+    </div>
+    <div class="item-card">
+      <img src="/img/product/Laptop-ASUS-Gaming-VivoBook.png" alt="Laptop ASUS Gaming VivoBook K3605ZC-RP564W">
+      <p class="item-name">Laptop ASUS Gaming VivoBook K3605ZC-RP564W</p>
+      <p class="item-price">4.990.000₫</p>
+    </div>
+    <div class="item-card">
+      <img src="/img/product/Laptop-ASUS-VivoBook-Go.png" alt="Laptop ASUS VivoBook Go 14 E1404FA-NK177W">
+      <p class="item-name">Laptop ASUS VivoBook Go 14 E1404FA-NK177W</p>
+      <p class="item-price">5.990.000₫</p>
+    </div>
+  </div>
+</div>
+
+
+  <footer class="custom-footer">
+    <div class="custom-footer-content">
+      <div class="custom-footer-logo">
+        <img src="/img/logo.png" alt="Techshop Logo">
+        <h3>TECHSHOP</h3>
+        <p>Thế giới công nghệ & Esports</p>
+      </div>
+      <div class="custom-footer-links">
+        <h4>Liên kết nhanh</h4>
+        <ul>
+          <li><a href="/html/home.html">Trang chủ</a></li>
+          <li><a href="#">Cửa hàng</a></li>
+          <li><a href="#">Giải đấu</a></li>
+          <li><a href="https://www.facebook.com/huylv.2k3">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div class="custom-footer-contact">
+        <h4>Thông tin liên hệ</h4>
+        <p><i class="fas fa-phone"></i>(+84) 0896 492 400</p>
+        <p><i class="fas fa-envelope"></i> levanhuy06042003@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> 99 Tô Hiến Thành, Sơn Trà, Đà Nẵng</p>
+      </div>
+      <div class="custom-footer-social">
+        <h4>Theo dõi chúng tôi</h4>
+        <a href="https://www.facebook.com/huylv.2k3"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/levanhuy06042003/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="custom-footer-bottom">
+      <p>&copy; 2025 TECHSHOP. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
