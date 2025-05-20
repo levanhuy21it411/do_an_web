@@ -54,3 +54,18 @@ document.addEventListener('DOMContentLoaded', function() {
   const interval = setInterval(updateCountdown, 1000);
   updateCountdown();
 });
+ document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll('.products-slide');
+    let current = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    setInterval(() => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }, 5000); // 4 giây đổi slide
+  });
