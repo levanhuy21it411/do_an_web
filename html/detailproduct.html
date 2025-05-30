@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="/css/detailproduct.css">
+    <script src="/js/detaiproduct.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+</head>
+<body>
+  <!-- header -->
+      <header class="custom-header">
+    <a href="/html/home.html">
+      <div class="custom-logo">
+        <img src="/img/logo.png" alt="Techshop Logo" />
+        <span>TECHSHOP</span>
+      </div>
+    </a>
+    <nav class="custom-navbar">
+      <a href="/html/home.html">HOME</a>
+      <a href="#">SHOP</a>
+      <a href="#">TOURNAMENT</a>
+      <a href="#">ABOUT</a>
+      <a href="https://www.facebook.com/huylv.2k3">CONTACT</a>
+    </nav>
+    <div class="custom-login-btn">
+      <button><a href="/html/login.html">Login</a></button>
+    </div>
+  </header>
+ <!-- content -->
+<nav class="breadcrumb">
+  <ul>
+    <li><a href="/html/shop.html"><i class="fas fa-home"></i> Shop</a></li>
+    <li><a href="/html/category.html">Tai nghe</a></li>
+    <li class="current">Tai nghe HyperX Cloud II</li>
+  </ul>
+</nav>
+<main class="product-container">
+
+  <!-- Hình ảnh sản phẩm -->
+  <section class="product-image">
+    <img id="mainImage" class="main-image" src="/img/product/tainghe/Tai-nghe-HyperX-Cloud-II.png" alt="Tai nghe HyperX Cloud II" />
+    <div class="thumbnail-gallery">
+      <img src="/img/product/tainghe/Tai-nghe-HyperX-Cloud-II.png" alt="Ảnh nhỏ 1" onclick="changeImage(this)" />
+      <img src="/img/product/tainghe/Tai-nghe-HyperX-Cloud-II-1.png" alt="Ảnh nhỏ 2" onclick="changeImage(this)" />
+      <img src="/img/product/tainghe/Tai-nghe-HyperX-Cloud-II-2.png" alt="Ảnh nhỏ 3" onclick="changeImage(this)" />
+      <img src="/img/product/tainghe/Tai-nghe-HyperX-Cloud-II-3.png" alt="Ảnh nhỏ 4" onclick="changeImage(this)" />
+    </div>
+  </section>
+
+  <!-- Thông tin sản phẩm -->
+  <section class="product-info">
+    <h1 class="product-title">Tai nghe HyperX Cloud II</h1>
+
+    <div class="product-rating" aria-label="Đánh giá sản phẩm: 4 trên 5 sao">
+      <span class="stars">★★★★☆</span> <span class="reviews-count">(128 đánh giá)</span>
+    </div>
+
+    <p class="product-price">1.890.000đ</p>
+
+    <p class="product-description">
+      Tai nghe gaming với âm thanh giả lập 7.1 surround, đệm tai êm ái và micro khử tiếng ồn. Phù hợp cho game thủ và người dùng làm việc chuyên nghiệp.
+    </p>
+
+    <div class="product-actions">
+      <label for="quantity">Số lượng:</label>
+      <input type="number" id="quantity" name="quantity" value="1" min="1" />
+      <button class="btn-add-cart">Thêm vào giỏ</button>
+    </div>
+
+    <!-- Thông số kỹ thuật -->
+    <div class="tech-specs">
+      <h2>Thông số kỹ thuật</h2>
+      <table>
+        <tbody>
+          <tr>
+            <th>Driver</th>
+            <td>53 mm - Neodymium</td>
+          </tr>
+          <tr>
+            <th>Kết nối</th>
+            <td>Jack 3.5mm + USB Sound Card</td>
+          </tr>
+          <tr>
+            <th>Trở kháng</th>
+            <td>60Ω</td>
+          </tr>
+          <tr>
+            <th>Trọng lượng</th>
+            <td>320g</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<!-- Ưu đãi sản phẩm -->
+<section class="product-promotions">
+  <h2>🎁 Ưu đãi khi mua sản phẩm</h2>
+  <ul class="promotion-list">
+    <li>🚚 Miễn phí vận chuyển toàn quốc</li>
+    <li>🛡️ Bảo hành chính hãng 12 tháng</li>
+    <li>💳 Thanh toán khi nhận hàng</li>
+    <li>🎧 Tặng kèm túi đựng tai nghe cao cấp</li>
+    <li>🔥 Giảm ngay 5% cho đơn hàng đầu tiên</li>
+  </ul>
+</section>
+
+<!-- đánh giá người dùng -->
+<section class="review-section">
+  <h2>⭐ Đánh giá sản phẩm</h2>
+
+  <!-- Danh sách đánh giá hiện có -->
+  <div class="review-list">
+    <div class="review-item">
+      <div class="review-header">
+        <span class="reviewer-name">Nguyễn Văn A</span>
+        <div class="review-stars">★★★★☆</div>
+        <span class="review-date">2025-05-29</span>
+      </div>
+      <p class="review-text">Tai nghe rất tốt, âm thanh rõ ràng và đeo rất thoải mái.</p>
+    </div>
+
+    <div class="review-item">
+      <div class="review-header">
+        <span class="reviewer-name">Lê Thị B</span>
+        <div class="review-stars">★★★★★</div>
+        <span class="review-date">2025-05-27</span>
+      </div>
+      <p class="review-text">Chất lượng vượt mong đợi, rất hài lòng!</p>
+    </div>
+
+    <!-- Thêm các đánh giá khác ở đây -->
+  </div>
+
+  <!-- Form gửi đánh giá mới -->
+  <form class="review-form">
+    <div class="rating-stars">
+      <input type="radio" id="star5" name="rating" value="5" />
+      <label for="star5" title="Tuyệt vời">&#9733;</label>
+
+      <input type="radio" id="star4" name="rating" value="4" />
+      <label for="star4" title="Tốt">&#9733;</label>
+
+      <input type="radio" id="star3" name="rating" value="3" />
+      <label for="star3" title="Bình thường">&#9733;</label>
+
+      <input type="radio" id="star2" name="rating" value="2" />
+      <label for="star2" title="Không tốt">&#9733;</label>
+
+      <input type="radio" id="star1" name="rating" value="1" />
+      <label for="star1" title="Tệ">&#9733;</label>
+    </div>
+
+    <textarea name="review" placeholder="Viết đánh giá của bạn..." rows="4" required></textarea>
+
+    <button type="submit" class="btn-submit">Gửi đánh giá</button>
+  </form>
+</section>
+
+
+<!-- Sản phẩm liên quan -->
+<section class="related-products">
+  <h2 class="section-title">🛒 Sản phẩm liên quan</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="/img/product/tainghe/tai-nghe-chup-tai-logitech-rgb-g733-10.png" alt="Tai nghe Logitech G733" />
+      <div class="product-info">
+        <h3>🎧 Tai nghe chụp tai Logitech G733</h3>
+        <p class="price">1.490.000đ</p>
+        <a href="/html/detailproduct-g431.html" class="btn-primary">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="/img/product/tainghe/Tai-nghe-Apple-AirPods-Max.png" alt="Tai nghe Apple AirPods Max" />
+      <div class="product-info">
+        <h3>🎧 Tai nghe chụp tai chống ồn Apple AirPods Max</h3>
+        <p class="price">2.190.000đ</p>
+        <a href="/html/detailproduct-kraken.html" class="btn-primary">Xem chi tiết</a>
+      </div>
+    </div>
+  </div>
+  <div class="see-more-container">
+    <a href="/html/shop.html" class="btn-see-more">🔍 Xem thêm sản phẩm</a>
+  </div>
+</section>
+
+  <!-- footer -->
+    <footer class="custom-footer">
+    <div class="custom-footer-content">
+      <div class="custom-footer-logo">
+        <img src="/img/logo.png" alt="Techshop Logo">
+        <h3>TECHSHOP</h3>
+        <p>Thế giới công nghệ & Esports</p>
+      </div>
+      <div class="custom-footer-links">
+        <h4>Liên kết nhanh</h4>
+        <ul>
+          <li><a href="/html/home.html">Trang chủ</a></li>
+          <li><a href="#">Cửa hàng</a></li>
+          <li><a href="#">Giải đấu</a></li>
+          <li><a href="https://www.facebook.com/huylv.2k3">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div class="custom-footer-contact">
+        <h4>Thông tin liên hệ</h4>
+        <p><i class="fas fa-phone"></i>(+84) 0896 492 400</p>
+        <p><i class="fas fa-envelope"></i> levanhuy06042003@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> 99 Tô Hiến Thành, Sơn Trà, Đà Nẵng</p>
+      </div>
+      <div class="custom-footer-social">
+        <h4>Theo dõi chúng tôi</h4>
+        <a href="https://www.facebook.com/huylv.2k3"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/levanhuy06042003/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="custom-footer-bottom">
+      <p>&copy; 2025 TECHSHOP. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
