@@ -1,4 +1,5 @@
 
+
 /* === Main Content Area với 3 cột === */
 .main-tournament-schedule {
     display: flex;
@@ -262,3 +263,46 @@
     text-decoration: underline;
 }
 
+
+/* --- Footer --- */
+.footer {
+    background-color: #0e0e10; 
+    color: #a0a0a0; 
+    padding: 30px 3%;
+    border-top: 1px solid #2c2c31;
+    margin-top: auto; 
+}
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 30px; 
+    margin-bottom: 20px;
+    text-align: left;
+}
+.footer h3, .footer h4 {
+    color: #e0e0e0; 
+    margin-bottom: 12px; 
+    font-size: 0.95em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.footer ul { list-style: none; padding: 0; }
+.footer ul li { margin-bottom: 6px; }
+.footer a { color: #adadb8; text-decoration: none; font-size: 0.85em; transition: color 0.15s ease; }
+.footer a:hover { color: #a970ff; } 
+.footer-contact p { margin-bottom: 6px; display: flex; align-items: center; font-size: 0.85em; }
+.footer-contact p i { margin-right: 8px; color: #a970ff; width: 16px; text-align: center; } 
+.footer-social a { margin-right: 10px; font-size: 1.2em; color: #adadb8; }
+.footer-social a:hover { color: #a970ff; }
+.footer-bottom {
+    text-align: center;
+    padding-top: 18px;
+    border-top: 1px solid #2c2c31;
+    font-size: 0.75em; 
+    color: #70707a; 
+}
+
+/* === Icon Styling (General) === */
+i.fas, i.far, i.fab { 
+    line-height: inherit; 
+}

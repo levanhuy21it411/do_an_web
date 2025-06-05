@@ -13,6 +13,7 @@
     --font-primary: 'Helvetica Neue', system-ui, Helvetica, Arial, sans-serif;
 }
 
+
 /* Main container */
 .about-container {
     width: 100%;
@@ -489,8 +490,9 @@ section:hover h2 i {
     color: var(--text-dark);
     font-size: 1rem;
     font-weight: 500;
-    transition: transform 0.3s ease, box-shadow: 0.3s ease;
-    cursor: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; 
+    cursor: pointer;     /* thêm nếu bạn muốn làm thẻ này trông như có thể tương tác */
 }
 
 .feedback-card:hover {
