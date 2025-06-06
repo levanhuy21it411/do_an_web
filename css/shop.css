@@ -145,8 +145,12 @@
   color: #555;
   cursor: pointer;
   transition: color .2s;
+  
 }
-
+.menu-column li a{
+  text-decoration: none;
+    color: #555;
+}
 .menu-column li:hover {
   color: #00aaff;
 }

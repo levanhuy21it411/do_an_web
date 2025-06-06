@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link rel="stylesheet" href="cart.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="/js/cart.js"></script>
+</head>
+<body>
+     <header class="header">
+    <a href="/html/home.html">
+      <div class="logo">
+        <img src="/img/logo.png" alt="Techshop Logo" />
+        <span>TECHSHOP</span>
+      </div>
+    </a>
+    <nav class="navbar">
+      <a href="/html/home.html">HOME</a>
+      <a href="/html/shop.html">SHOP</a>
+      <a href="/html/tournament.html">TOURNAMENT</a>
+      <a href="/html/about.html">ABOUT</a>
+      <a href="https://www.facebook.com/huylv.2k3">CONTACT</a>
+    </nav>
+    <div class="login-btn">
+      <button><a href="/html/login.html">Login</a></button>
+    </div>
+  </header>
+  <main class="cart-container">
+    <h1 class="page-title">Giỏ hàng của bạn</h1>
+
+    <div class="cart-content">
+      <section
+        class="cart-items"
+        aria-label="Danh sách sản phẩm trong giỏ hàng"
+        id="cart-items"
+      >
+        <div class="cart-item" data-price="1890000">
+          <img
+            src="/img/product/tainghe/Tai-nghe-HyperX-Cloud-II.png"
+            alt="Tai nghe HyperX Cloud II"
+          />
+          <div class="item-info">
+            <h2>Tai nghe HyperX Cloud II</h2>
+            <p class="price">1.890.000đ</p>
+
+            <div class="quantity-remove-wrapper">
+              <label class="quantity-label" for="quantity1">Số lượng:</label>
+              <input
+                type="number"
+                id="quantity1"
+                class="quantity-input"
+                value="1"
+                min="1"
+                aria-live="polite"
+                aria-label="Số lượng sản phẩm Tai nghe HyperX Cloud II"
+              />
+            </div>
+          </div>
+          <button class="remove-btn" aria-label="Xóa sản phẩm">-</button>
+        </div>
+      </section>
+
+      <aside class="cart-summary" aria-label="Tóm tắt đơn hàng">
+        <h2>Tóm tắt đơn hàng</h2>
+        <div class="summary-row">
+          <span>Tạm tính:</span>
+          <span id="subtotal">1.890.000đ</span>
+        </div>
+        <div class="summary-row">
+          <span>Phí vận chuyển:</span>
+          <span class="free-ship">Miễn phí 🚚</span>
+        </div>
+        
+
+        <div class="discount-code">
+          <label for="discount-input">
+            Mã giảm giá
+            <span
+              class="tooltip-icon"
+              data-tooltip="Nhập mã giảm giá hợp lệ để được giảm giá."
+              >ℹ️</span
+            >
+          </label>
+          <input type="text" id="discount-input" placeholder="Nhập mã giảm giá" />
+          <button onclick="checkDiscount()" id="apply-discount">Áp dụng</button>
+          <div class="discount-message" id="discount-message"></div>
+        </div>
+<div class="summary-total">
+          <span>Tổng cộng:</span>
+          <span id="total">1.890.000đ</span>
+        </div> 
+
+        <a href="/html/payment.html"><button class="checkout-btn">🧾 Tiến hành thanh toán</button></a>
+        <a href="/html/shop.html" class="continue-shopping">← Tiếp tục mua sắm</a>
+
+        <div class="support-info">
+          <p>
+            📞 Cần giúp đỡ? Gọi <a href="tel:19001234">1900 1234</a> hoặc gửi
+            email
+            <a href="mailto:support@yourshop.com">support@yourshop.com</a>
+          </p>
+        </div>
+      </aside>
+    </div>
+
+   
+  </main>
+ <section class="related-products" aria-label="Sản phẩm bạn có thể thích">
+      <h2>✨ Sản phẩm bạn có thể thích</h2>
+      <div class="products-list">
+        <div class="product-card">
+          <img src="/img/product/product1.png" alt="Sản phẩm 1" />
+          <h4>Sản phẩm 1</h4>
+          <p class="price">499.000đ</p>
+          <button>➕ Thêm vào giỏ</button>
+        </div>
+        <div class="product-card">
+          <img src="/img/product/product2.png" alt="Sản phẩm 2" />
+          <h4>Sản phẩm 2</h4>
+          <p class="price">850.000đ</p>
+          <button>➕ Thêm vào giỏ</button>
+        </div>
+        <div class="product-card">
+          <img src="/img/product/product2.png" alt="Sản phẩm 2" />
+          <h4>Sản phẩm 2</h4>
+          <p class="price">850.000đ</p>
+          <button>➕ Thêm vào giỏ</button>
+        </div>
+        <div class="product-card">
+          <img src="/img/product/product2.png" alt="Sản phẩm 2" />
+          <h4>Sản phẩm 2</h4>
+          <p class="price">850.000đ</p>
+          <button>➕ Thêm vào giỏ</button>
+        </div>
+        <div class="product-card">
+          <img src="/img/product/product2.png" alt="Sản phẩm 2" />
+          <h4>Sản phẩm 2</h4>
+          <p class="price">850.000đ</p>
+          <button>➕ Thêm vào giỏ</button>
+        </div>
+        <div class="product-card">
+          <img src="/img/product/product2.png" alt="Sản phẩm 2" />
+          <h4>Sản phẩm 2</h4>
+          <p class="price">850.000đ</p>
+          <button>➕ Thêm vào giỏ</button>
+        </div>
+        <div class="product-card">
+          <img src="/img/product/product2.png" alt="Sản phẩm 2" />
+          <h4>Sản phẩm 2</h4>
+          <p class="price">850.000đ</p>
+          <button>➕ Thêm vào giỏ</button>
+        </div>
+     <div class="see-more-wrapper">
+  <a href="/html/shop.html" class="circle-arrow-btn" aria-label="Xem thêm sản phẩm">
+    <i class="fas fa-arrow-right"></i>
+  </a>
+</div>
+
+      </div>
+    </section>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="/img/logo.png" alt="Techshop Logo">
+        <h3>TECHSHOP</h3>
+        <p>Thế giới công nghệ & Esports</p>
+      </div>
+      <div class="footer-links">
+        <h4>Liên kết nhanh</h4>
+        <ul>
+          <li><a href="/html/home.html">Trang chủ</a></li>
+          <li><a href="#">Cửa hàng</a></li>
+          <li><a href="#">Giải đấu</a></li>
+          <li><a href="https://www.facebook.com/huylv.2k3">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Thông tin liên hệ</h4>
+        <p><i class="fas fa-phone"></i>(+84) 0896 492 400</p>
+        <p><i class="fas fa-envelope"></i> levanhuy06042003@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> 99 Tô Hiến Thành, Sơn Trà, Đà Nẵng</p>
+      </div>
+      <div class="footer-social">
+        <h4>Theo dõi chúng tôi</h4>
+        <a href="https://www.facebook.com/huylv.2k3"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/levanhuy06042003/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 TECHSHOP. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
