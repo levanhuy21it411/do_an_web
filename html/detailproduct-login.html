@@ -11,29 +11,52 @@
 </head>
 <body>
   <!-- header -->
-    <header class="header">
-    <a href="/html/home.html">
-      <div class="logo">
-        <img src="/img/logo.png" alt="Techshop Logo" />
-        <span>TECHSHOP</span>
-      </div>
-    </a>
-    <nav class="navbar">
-      <a href="/html/home.html">HOME</a>
-      <a href="/html/shop.html" class="active">SHOP</a>
-      <a href="/html/tournament.html">TOURNAMENT</a>
-      <a href="/html/about.html">ABOUT</a>
-      <a href="https://www.facebook.com/huylv.2k3">CONTACT</a>
-    </nav>
-    <div class="login-btn">
-      <button><a href="/html/login.html">Login</a></button>
+   <header class="techshop-header">
+  <a href="/html/home.html" class="techshop-header__logo">
+    <img src="/img/logo.png" alt="Techshop Logo">
+    <span>TECHSHOP</span>
+  </a>
+
+  <nav class="techshop-header__navbar">
+    <a href="/html/home-login.html" >Home</a>
+    <a href="/html/shop-login.html" class="active">Shop</a>
+    <a href="/html/tournament-login.html">Tournament</a>
+    <a href="/html/about-login.html">About</a>
+    <a href="https://www.facebook.com/huylv.2k3">Contact</a>
+  </nav>
+
+  <div class="techshop-header__right">
+    <div class="techshop-header__search-bar">
+        <input type="text" placeholder="Search products...">
+        <button><i class="fas fa-search"></i></button>
     </div>
-  </header>
+
+    <a href="/html/cart.html" class="techshop-header__cart-icon"><i class="fas fa-shopping-cart"></i></a>
+
+    <div class="techshop-header__notification">
+        <i class="fas fa-bell"></i>
+        <span class="techshop-header__badge">3</span>
+    </div>
+
+    <div class="techshop-header__user-dropdown">
+        <input type="checkbox" id="toggle-dropdown-techshop">
+        <label for="toggle-dropdown-techshop" class="techshop-header__avatar-wrapper">
+            <img src="/img/le_van_huy.png" alt="User Avatar" class="techshop-header__avatar-img">
+        </label>
+
+        <div class="techshop-header__dropdown-menu">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="/html/home.html">Logout</a>
+        </div>
+    </div>
+  </div>
+</header>
  <!-- content -->
 <nav class="breadcrumb">
   <ul>
-    <li><a href="/html/shop.html"><i class="fas fa-home"></i> Shop</a></li>
-    <li><a href="/html/product.html">Laptop</a></li>
+    <li><a href="/html/shop-login.html"><i class="fas fa-home"></i> Shop</a></li>
+    <li><a href="/html/product-login.html">Laptop</a></li>
     <li class="current">ASUS VivoBook Go Laptop</li>
   </ul>
 </nav>
@@ -184,7 +207,7 @@
     </div>
   </div>
   <div class="see-more-container">
-    <a href="/html/shop.html" class="btn-see-more">🔍 See More Products</a>
+    <a href="/html/shop-login.html" class="btn-see-more">🔍 See More Products</a>
   </div>
 </section>
 

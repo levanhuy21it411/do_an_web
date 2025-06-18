@@ -9,41 +9,55 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/tournament.css">
         <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/ranking.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
       <script src="/js/tournament.js"></script>
-      <link rel="stylesheet" href="/css/ranking.css">
 </head>
 <body class="bw-theme">
-      <header class="header">
-    <a href="/html/home.html">
-      <div class="logo">
-        <img src="/img/logo.png" alt="Techshop Logo" />
-        <span>TECHSHOP</span>
-      </div>
-    </a>
-    <nav class="navbar">
-      <a href="/html/home.html" >HOME</a>
-      <a href="/html/shop.html">SHOP</a>
-      <a href="/html/tournament.html" class="active">TOURNAMENT</a>
-      <a href="/html/about.html">ABOUT</a>
-      <a href="https://www.facebook.com/huylv.2k3">CONTACT</a>
-    </nav>
-  <div class="header-right">
-  <div class="search-bar">
-    <input type="text" placeholder="Search...">
-    <button type="submit"><i class="fas fa-search"></i></button>
+<header class="techshop-header">
+  <a href="/html/home.html" class="techshop-header__logo">
+    <img src="/img/logo.png" alt="Techshop Logo">
+    <span>TECHSHOP</span>
+  </a>
+
+  <nav class="techshop-header__navbar">
+    <a href="/html/home-login.html" >Home</a>
+    <a href="/html/shop-login.html">Shop</a>
+    <a href="/html/tournament-login.html" class="active">Tournament</a>
+    <a href="/html/about-login.html">About</a>
+    <a href="https://www.facebook.com/huylv.2k3">Contact</a>
+  </nav>
+
+  <div class="techshop-header__right">
+    <div class="techshop-header__search-bar">
+        <input type="text" placeholder="Search products...">
+        <button><i class="fas fa-search"></i></button>
+    </div>
+
+    <a href="/html/cart.html" class="techshop-header__cart-icon"><i class="fas fa-shopping-cart"></i></a>
+
+    <div class="techshop-header__notification">
+        <i class="fas fa-bell"></i>
+        <span class="techshop-header__badge">3</span>
+    </div>
+
+    <div class="techshop-header__user-dropdown">
+        <input type="checkbox" id="toggle-dropdown-techshop">
+        <label for="toggle-dropdown-techshop" class="techshop-header__avatar-wrapper">
+            <img src="/img/le_van_huy.png" alt="User Avatar" class="techshop-header__avatar-img">
+        </label>
+
+        <div class="techshop-header__dropdown-menu">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="/html/home.html">Logout</a>
+        </div>
+    </div>
   </div>
-
-  <div class="login-btn">
-    <button><a href="/html/login.html">Login</a></button>
-  </div>
-</div>
+</header>
 
 
-  </header>
-
-
-     <main class="main-tournament-schedule">
+    <main class="main-tournament-schedule">
         <div class="sidebar left-sidebar">
             <h3><i class="fas fa-list-ul"></i> Tournaments</h3>
             <ul class="tournament-categories">
@@ -54,7 +68,7 @@
             </ul>
             <h3 style="margin-top: 30px;"><i class="fas fa-cog"></i> Ranking</h3>
             <ul>
-                <li><a href="#" class="filter-btn" data-filter="rankings_only">Team Rankings</a></li>
+                <li><a href="/html/ra" class="filter-btn" data-filter="rankings_only">Team Rankings</a></li>
             </ul>
         </div>
 
@@ -81,6 +95,7 @@
                     <li class="ranking-item-main"><span class="rank">3</span><img class="team-logo" src="https://scontent.fsgn2-4.fna.fbcdn.net/v/t39.30808-1/503403162_1174979051310895_7258116514411032834_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=101&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=Fv4OUdg7qQcQ7kNvwEp77B3&_nc_oc=AdnsCaZCaqwRtc0xEw9BdhMD5uBscilXfKycw-CUXcnrGdYd0JtH3t_N0gbxDXfzdO8&_nc_zt=24&_nc_ht=scontent.fsgn2-4.fna&_nc_gid=AXJ3-aB13XDOSz6c6DViTw&oh=00_AfNVQK26AbaSLT4exfPHznlsdlgHEP71uFX9LpoRM6qPqQ&oe=68536457" alt="DAY Logo"><span class="team-name">Cerberus</span></li>
                 </ul>
             </div>
+
             <div class="tournament-section" data-id="valorant">
                 <h2><i class="far fa-calendar-alt"></i> Match Schedule - VALORANT </h2>
                 <div class="match-day">
@@ -152,9 +167,10 @@
                 </div>
             </div>
         </div>
+
         <div class="sidebar right-sidebar">
             <h3><i class="fas fa-medal"></i> Rankings</h3>
-         <ul class="ranking-list">
+            <ul class="ranking-list">
                 <li><a href="#">1. <img src="https://cdn-media.sforum.vn/storage/app/media/wp-content/uploads/2021/07/lol-t1-1.jpg" alt="T1" style="height:18px; vertical-align:middle; background-color:#3a3a3e; padding:1px; border-radius:3px;"> T1</a></li>
                 <li><a href="#">2. <img src="https://images.seeklogo.com/logo-png/40/1/gen-g-logo-png_seeklogo-400443.png" alt="Gen.G" style="height:18px; vertical-align:middle; background-color:#3a3a3e; padding:1px; border-radius:3px;">
  Gen.G</a></li>
@@ -177,6 +193,7 @@
             </ul>
         </div>
     </main>
+
 
    <!-- footer -->
   <footer class="footer">

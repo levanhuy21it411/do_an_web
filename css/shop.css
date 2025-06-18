@@ -3,7 +3,9 @@
   display: flex;
   padding: 20px;
 }
-
+a{
+  text-decoration: none;
+}
 /*==========Sidebar Container==========*/
 .sidebar {
   width: 250px;
@@ -473,7 +475,7 @@
 /*Top tìm kiếm hàng đầu*/
 .section {
   padding: 50px 30px;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto;
 }
 

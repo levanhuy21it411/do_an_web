@@ -14,33 +14,50 @@
 </head>
 
 <body>
-  <header class="header">
-    <a href="/html/home.html">
-      <div class="logo">
-        <img src="/img/logo.png" alt="Techshop Logo" />
-        <span>TECHSHOP</span>
-      </div>
-    </a>
-    <nav class="navbar">
-      <a href="/html/home.html" class="active">HOME</a>
-      <a href="/html/shop.html">SHOP</a>
-      <a href="/html/tournament.html">TOURNAMENT</a>
-      <a href="/html/about.html">ABOUT</a>
-      <a href="https://www.facebook.com/huylv.2k3">CONTACT</a>
-    </nav>
-  <div class="header-right">
-  <div class="search-bar">
-    <input type="text" placeholder="Search...">
-    <button type="submit"><i class="fas fa-search"></i></button>
+<header class="techshop-header">
+  <a href="/html/home.html" class="techshop-header__logo">
+    <img src="/img/logo.png" alt="Techshop Logo">
+    <span>TECHSHOP</span>
+  </a>
+
+  <nav class="techshop-header__navbar">
+    <a href="/html/home-login.html" class="active">Home</a>
+    <a href="/html/shop-login.html">Shop</a>
+    <a href="/html/tournament-login.html">Tournament</a>
+    <a href="/html/about-login.html">About</a>
+    <a href="https://www.facebook.com/huylv.2k3">Contact</a>
+  </nav>
+
+  <div class="techshop-header__right">
+    <div class="techshop-header__search-bar">
+        <input type="text" placeholder="Search products...">
+        <button><i class="fas fa-search"></i></button>
+    </div>
+
+    <a href="/html/cart.html" class="techshop-header__cart-icon"><i class="fas fa-shopping-cart"></i></a>
+
+    <div class="techshop-header__notification">
+        <i class="fas fa-bell"></i>
+        <span class="techshop-header__badge">3</span>
+    </div>
+
+    <div class="techshop-header__user-dropdown">
+        <input type="checkbox" id="toggle-dropdown-techshop">
+        <label for="toggle-dropdown-techshop" class="techshop-header__avatar-wrapper">
+            <img src="/img/le_van_huy.png" alt="User Avatar" class="techshop-header__avatar-img">
+        </label>
+
+        <div class="techshop-header__dropdown-menu">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="/html/home.html">Logout</a>
+        </div>
+    </div>
   </div>
-
-  <div class="login-btn">
-    <button><a href="/html/login.html">Login</a></button>
-  </div>
-</div>
+</header>
 
 
-  </header>
+
 
   <section class="hero">
     <div class="hero-slider">
@@ -54,8 +71,8 @@
       <h1>Welcome to TECHSHOP – The World of Technology & Esports</h1>
       <p>Discover high-quality gaming gear, join thrilling tournaments, and connect with the gaming community.</p>
       <div class="hero-buttons">
-        <a href="/html/shop.html" class="btn shop-btn">Shop Now</a>
-        <a href="/html/tournament.html" class="btm tour-btn">View Tournament</a>
+        <a href="/html/shop-login.html" class="btn shop-btn">Shop Now</a>
+        <a href="/html/tournament-login.html" class="btm tour-btn">View Tournament</a>
       </div>
     </div>
   </section>
@@ -67,7 +84,7 @@
         <div class="card">
           <img src="/img/product/laptop/Laptop-ASUS-VivoBook-Go.png" alt="ASUS VivoBook Go Laptop">
           <h3>ASUS VivoBook Go Laptop</h3>
-          <a href="/html/detailproduct.html"><button>Learn More</button></a>
+          <a href="/html/detailproduct-login.html"><button>Learn More</button></a>
         </div>
         <div class="card">
           <img src="/img/product/banphim/Ban_phim.jpg" alt="Mechanical Keyboard Strike Pro">

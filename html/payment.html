@@ -14,89 +14,115 @@
       <script src="/js/payment.js"></script>
 </head>
 <body>
-      <header class="header">
-    <a href="/html/home.html">
-      <div class="logo">
-        <img src="/img/logo.png" alt="Techshop Logo" />
-        <span>TECHSHOP</span>
-      </div>
-    </a>
-    <nav class="navbar">
-      <a href="/html/home.html">HOME</a>
-      <a href="/html/shop.html">SHOP</a>
-      <a href="/html/tournament.html">TOURNAMENT</a>
-      <a href="/html/about.html">ABOUT</a>
-      <a href="https://www.facebook.com/huylv.2k3">CONTACT</a>
-    </nav>
-    <div class="login-btn">
-      <button><a href="/html/login.html">Login</a></button>
+<header class="techshop-header">
+  <a href="/html/home.html" class="techshop-header__logo">
+    <img src="/img/logo.png" alt="Techshop Logo">
+    <span>TECHSHOP</span>
+  </a>
+
+  <nav class="techshop-header__navbar">
+    <a href="/html/home-login.html" >Home</a>
+    <a href="/html/shop-login.html" class="active">Shop</a>
+    <a href="/html/tournament-login.html">Tournament</a>
+    <a href="/html/about-login.html">About</a>
+    <a href="https://www.facebook.com/huylv.2k3">Contact</a>
+  </nav>
+
+  <div class="techshop-header__right">
+    <div class="techshop-header__search-bar">
+        <input type="text" placeholder="Search products...">
+        <button><i class="fas fa-search"></i></button>
     </div>
-  </header>
-   <main class="payment-container">
-    <h1>Thanh toán đơn hàng</h1>
 
-    <form id="payment-form">
-      <label for="fullname">Họ và tên</label>
-      <input type="text" id="fullname" name="fullname" placeholder="Nguyễn Văn A" required />
+    <a href="/html/cart.html" class="techshop-header__cart-icon"><i class="fas fa-shopping-cart"></i></a>
 
-      <label for="phone">Số điện thoại</label>
-      <input type="tel" id="phone" name="phone" placeholder="0912xxxxxx" pattern="[0-9]{10,11}" required />
+    <div class="techshop-header__notification">
+        <i class="fas fa-bell"></i>
+        <span class="techshop-header__badge">3</span>
+    </div>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="email@example.com" required />
+    <div class="techshop-header__user-dropdown">
+        <input type="checkbox" id="toggle-dropdown-techshop">
+        <label for="toggle-dropdown-techshop" class="techshop-header__avatar-wrapper">
+            <img src="/img/le_van_huy.png" alt="User Avatar" class="techshop-header__avatar-img">
+        </label>
 
-      <label for="address">Địa chỉ nhận hàng</label>
-      <input type="text" id="address" name="address" placeholder="Số nhà, đường, phường/xã, quận/huyện, thành phố" required />
+        <div class="techshop-header__dropdown-menu">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="/html/home.html">Logout</a>
+        </div>
+    </div>
+  </div>
+</header>
+<main class="techshop-payment-container">
+  <h1>Order Payment</h1>
 
-      <label for="payment-method">Phương thức thanh toán</label>
-      <select id="payment-method" name="payment-method" required>
-        <option value="">-- Chọn phương thức --</option>
-        <option value="cod">Thanh toán khi nhận hàng (COD)</option>
-        <option value="online">Thanh toán online</option>
+  <form id="payment-form">
+    <label class="techshop-payment-label" for="fullname">Full Name</label>
+    <input class="techshop-payment-input" type="text" id="fullname" name="fullname" placeholder="Nguyen Van A" required />
+
+    <label class="techshop-payment-label" for="phone">Phone Number</label>
+    <input class="techshop-payment-input" type="tel" id="phone" name="phone" placeholder="0912xxxxxx" pattern="[0-9]{10,11}" required />
+
+    <label class="techshop-payment-label" for="email">Email</label>
+    <input class="techshop-payment-input" type="email" id="email" name="email" placeholder="email@example.com" required />
+
+    <label class="techshop-payment-label" for="address">Delivery Address</label>
+    <input class="techshop-payment-input" type="text" id="address" name="address" placeholder="House number, street, ward/commune, district, city" required />
+
+    <label class="techshop-payment-label" for="payment-method">Payment Method</label>
+    <select class="techshop-payment-select" id="payment-method" name="payment-method" required>
+      <option value="">-- Select a payment method --</option>
+      <option value="cod">Cash on Delivery (COD)</option>
+      <option value="online">Online Payment</option>
+    </select>
+
+    <div class="techshop-payment-bank" id="bank-select">
+      <label class="techshop-payment-label" for="bank">Select Bank</label>
+      <select class="techshop-payment-select" id="bank" name="bank">
+        <option value="">-- Select a bank --</option>
+        <option value="vietcombank">Vietcombank</option>
+        <option value="techcombank">Techcombank</option>
+        <option value="bidv">BIDV</option>
+        <option value="agribank">Agribank</option>
+        <option value="mbbank">MB Bank</option>
+        <option value="acb">ACB</option>
       </select>
+    </div>
 
-      <div class="bank-select" id="bank-select">
-        <label for="bank">Chọn ngân hàng</label>
-        <select id="bank" name="bank">
-          <option value="">-- Chọn ngân hàng --</option>
-          <option value="vietcombank">Vietcombank</option>
-          <option value="techcombank">Techcombank</option>
-          <option value="bidv">BIDV</option>
-          <option value="agribank">Agribank</option>
-          <option value="mbbank">MB Bank</option>
-          <option value="acb">ACB</option>
-        </select>
-      </div>
+    <button class="techshop-payment-button" type="submit" onclick="goToSuccessPage()">Confirm Payment</button>
 
-      <button type="submit" onclick="goToSuccessPage()">Xác nhận thanh toán</button>
+    <p class="techshop-payment-note">* After confirmation, a staff member will contact you to complete your order.</p>
+  </form>
+</main>
 
-      <p class="note">* Sau khi xác nhận, nhân viên sẽ liên hệ với bạn để hoàn tất đơn hàng.</p>
-    </form>
-  </main>
-   <footer class="footer">
+
+  <!-- footer -->
+  <footer class="footer">
     <div class="footer-content">
       <div class="footer-logo">
         <img src="/img/logo.png" alt="Techshop Logo">
         <h3>TECHSHOP</h3>
-        <p>Thế giới công nghệ & Esports</p>
+        <p>The World of Technology & Esports</p>
       </div>
       <div class="footer-links">
-        <h4>Liên kết nhanh</h4>
+        <h4>Quick Links</h4>
         <ul>
-          <li><a href="/html/home.html">Trang chủ</a></li>
-          <li><a href="#">Cửa hàng</a></li>
-          <li><a href="#">Giải đấu</a></li>
-          <li><a href="https://www.facebook.com/huylv.2k3">Liên hệ</a></li>
+          <li><a href="/html/home.html">Home</a></li>
+          <li><a href="/html/shop.html">Store</a></li>
+          <li><a href="/html/tournament.html">Tournament</a></li>
+          <li><a href="https://www.facebook.com/huylv.2k3">Contact</a></li>
         </ul>
       </div>
       <div class="footer-contact">
-        <h4>Thông tin liên hệ</h4>
+        <h4>Contact Information</h4>
         <p><i class="fas fa-phone"></i>(+84) 0896 492 400</p>
         <p><i class="fas fa-envelope"></i> levanhuy06042003@gmail.com</p>
-        <p><i class="fas fa-map-marker-alt"></i> 99 Tô Hiến Thành, Sơn Trà, Đà Nẵng</p>
+        <p><i class="fas fa-map-marker-alt"></i> 99 To Hien Thanh, Son Tra, Da Nang</p>
       </div>
       <div class="footer-social">
-        <h4>Theo dõi chúng tôi</h4>
+        <h4>Follow Us</h4>
         <a href="https://www.facebook.com/huylv.2k3"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-youtube"></i></a>
         <a href="https://www.instagram.com/levanhuy06042003/"><i class="fab fa-instagram"></i></a>

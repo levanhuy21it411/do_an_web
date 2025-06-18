@@ -41,7 +41,7 @@ body::before {
 
 .message-box i {
   font-size: 80px;
-  color: #00fff9;
+  color: hsl(190, 77%, 45%);
   text-shadow:
     0 0 8px #00fff9,
     0 0 15px #00fff9,
