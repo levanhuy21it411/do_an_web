@@ -1,21 +1,17 @@
-// Khi nội dung HTML tải xong thì bắt đầu chạy đoạn mã bên trong
+// Khi toàn bộ nội dung HTML đã tải xong thì thực thi đoạn mã
 document.addEventListener('DOMContentLoaded', function () {
 
-  // Lấy tất cả các ảnh trong slider
+  // Lấy tất cả các thẻ ảnh bên trong slider có class .hero-slider
   var images = document.querySelectorAll('.hero-slider img');
 
-  // Lấy nút chuyển ảnh về trước và nút chuyển ảnh kế tiếp
-  var prevBtn = document.querySelector('.prev-btn');
-  var nextBtn = document.querySelector('.next-btn');
-
-  // Lấy phần tiêu đề (h1) và đoạn mô tả (p) để thay đổi nội dung
+  // Lấy phần tử tiêu đề (thẻ h1) và mô tả (thẻ p) trong phần nội dung slider
   var heading = document.querySelector('.hero-content h1');
   var paragraph = document.querySelector('.hero-content p');
 
-  // Vị trí ảnh hiện tại (bắt đầu từ ảnh đầu tiên: 0)
+  // Chỉ số của ảnh hiện tại trong slider, bắt đầu từ 0 (tức là ảnh đầu tiên)
   var currentIndex = 0;
 
-  // Mảng chứa tiêu đề và mô tả tương ứng với từng ảnh
+  // Mảng chứa tiêu đề và mô tả tương ứng với từng ảnh trong slider
   var slideText = [
     {
       title: "Join Exciting Esports Tournaments",
@@ -31,44 +27,31 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   ];
 
-  // Hàm đổi ảnh và cập nhật nội dung chữ
+  // Hàm dùng để hiển thị ảnh và cập nhật tiêu đề/mô tả tương ứng
   function changeSlide() {
-    // Ẩn tất cả ảnh trước
-    images.forEach(function(image) {
-      image.classList.remove('active'); // Xóa class 'active' để ẩn ảnh
+    // Ẩn tất cả ảnh bằng cách gỡ bỏ class 'active'
+    images.forEach(function(img) {
+      img.classList.remove('active');
     });
 
-    // Hiện ảnh đang chọn bằng cách thêm class 'active'
+    // Chỉ hiển thị ảnh tại vị trí currentIndex bằng cách thêm class 'active'
     images[currentIndex].classList.add('active');
 
-    // Cập nhật tiêu đề và mô tả tương ứng với ảnh hiện tại
+    // Cập nhật tiêu đề và mô tả cho phù hợp với ảnh hiện tại
     heading.textContent = slideText[currentIndex].title;
     paragraph.textContent = slideText[currentIndex].description;
   }
 
-  // Hàm chuyển sang ảnh kế tiếp
+  // Hàm để chuyển sang ảnh kế tiếp
   function nextSlide() {
-    // Tăng chỉ số ảnh lên 1, nếu vượt quá thì quay về ảnh đầu
+    // Tăng chỉ số ảnh hiện tại lên 1, nếu vượt quá số lượng ảnh thì quay lại ảnh đầu
     currentIndex = (currentIndex + 1) % images.length;
-    changeSlide(); // Cập nhật lại hình ảnh và nội dung
+    changeSlide(); // Gọi hàm cập nhật ảnh và nội dung
   }
 
-  // Hàm chuyển về ảnh trước đó
-  function prevSlide() {
-    // Giảm chỉ số ảnh, nếu nhỏ hơn 0 thì quay về ảnh cuối cùng
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    changeSlide(); // Cập nhật lại hình ảnh và nội dung
-  }
+  // Tự động chuyển ảnh mỗi 5 giây (5000 mili giây)
+  setInterval(nextSlide, 4000);
 
-  // Gắn sự kiện khi bấm nút '→' thì chuyển tới ảnh sau
-  nextBtn.addEventListener('click', nextSlide);
-
-  // Gắn sự kiện khi bấm nút '←' thì chuyển về ảnh trước
-  prevBtn.addEventListener('click', prevSlide);
-
-  // Tự động chuyển ảnh sau mỗi 5 giây
-  setInterval(nextSlide, 5000);
-
-  // Khi trang mới mở, hiển thị ảnh đầu tiên ngay
+  // Khi trang vừa mở, hiển thị ngay ảnh đầu tiên
   changeSlide();
 });
