@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     changeSlide(); // Gọi hàm cập nhật ảnh và nội dung
   }
 
-  // Tự động chuyển ảnh mỗi 5 giây (5000 mili giây)
+  // Tự động chuyển ảnh mỗi 4 giây
   setInterval(nextSlide, 4000);
 
   // Khi trang vừa mở, hiển thị ngay ảnh đầu tiên

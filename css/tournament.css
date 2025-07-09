@@ -76,9 +76,9 @@
     color: #a970ff; 
 }
 .main-tournament-schedule .sidebar ul li a:hover {
-    background-color: #25252a; 
-    color: #efeff1;
-    border-left-color: #a970ff; 
+    background-color: #1010a5; 
+    color: #1313bcc6;
+    border-left-color: #6b2fc5; 
 }
 .main-tournament-schedule .sidebar ul li a.active { 
     background-color: #a970ff; 
